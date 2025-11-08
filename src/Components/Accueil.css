@@ -1,0 +1,45 @@
+.accueil {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.intro p {
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-chatbot {
+  display: inline-block;
+  background-color: #8B0000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-chatbot:hover {
+  background-color: #a52a2a;
+}
+
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 14px;
+  color: black;
+}

@@ -1,0 +1,258 @@
+/* Chatbot.css — version finale harmonisée */
+/* Layout principal */
+.chatbot-container {
+  width: 52%;
+  max-width: 980px;
+  min-width: 320px;
+  margin: 28px auto;
+  text-align: center;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #2b2b2b;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(43, 43, 43, 0.08);
+}
+
+/* Header / titre */
+.chatbot-container h2 {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: #5a2a00;
+}
+
+/* Focus mode small button */
+.focus-btn {
+  background: transparent;
+  border: 1px solid #e5d6c9;
+  color: #5a2a00;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+.focus-btn:hover { opacity: 0.95; transform: translateY(-1px); }
+
+/* Select / contrôles */
+select, .language-select, .question-mode-select {
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px 6px;
+  border: 1px solid #e0d6d0;
+  background: #fff;
+}
+
+/* Input area */
+.input-area {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.input-area input[type="text"] {
+  width: 72%;
+  min-width: 180px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e6e0dd;
+  font-size: 15px;
+}
+
+/* Boutons globaux */
+button {
+  min-width: 120px;
+  padding: 10px 14px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #8b4513; /* marron */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(139,69,19,0.14); }
+
+/* Chat history */
+.chat-history {
+  margin-top: 14px;
+  max-height: 460px;
+  overflow-y: auto;
+  padding: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff, #fbf8f6);
+  border: 1px solid #eee6e1;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Individual messages */
+.bot-text, .message {
+  margin: 8px 6px;
+  display: block;
+  align-self: flex-start;
+  max-width: 86%;
+  word-wrap: break-word;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* User messages */
+.message.user {
+  text-align: right;
+  align-self: flex-end;
+  background: #e8f3ff;
+  color: #0a2750;
+  padding: 10px 12px;
+  margin-left: 20%;
+  border-radius: 12px 12px 6px 12px;
+}
+
+/* Bot messages */
+.bot-text {
+  text-align: left;
+  background: #f3f2f1;
+  color: #222;
+  padding: 10px 12px;
+  margin-right: 20%;
+  border-radius: 12px 12px 12px 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  animation: fadeInUp .28s ease;
+}
+
+/* Typing / loader indicator */
+.bot-message.typing-indicator {
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:flex-start;
+  margin: 8px;
+  color: #8B4513;
+  font-style: italic;
+}
+
+/* Audio controls */
+.audio-controls {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
+  margin-top: 8px;
+}
+.audio-controls button {
+  background: #8b4513;
+  padding: 8px 12px;
+}
+.audio-controls span {
+  font-size: 14px;
+  color: #5a2a00;
+  background: rgba(139,69,19,0.06);
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+/* Notification after reply */
+.notification {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(34,139,34,0.08);
+  color: #1f7a1f;
+  font-weight: 600;
+}
+
+/* Feedback stars */
+/* === Feedback coloré avec étoiles === */
+.feedback-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.feedback-container span {
+  color: #5a2a00;
+  font-weight: 600;
+}
+
+.feedback-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Couleurs par note */
+.feedback-container button:nth-child(2) { color: #000; }   /* 1★ noir */
+.feedback-container button:nth-child(3) { color: #d90429; } /* 2★ rouge */
+.feedback-container button:nth-child(4) { color: #f6b700; } /* 3★ jaune */
+.feedback-container button:nth-child(5) { color: #ff9100; } /* 4★ orange */
+.feedback-container button:nth-child(6) { color: #2e8b57; } /* 5★ vert */
+
+.feedback-container button:hover {
+  transform: scale(1.25);
+  filter: brightness(1.2);
+}
+
+
+/* Error text */
+.error {
+  color: #b00020;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .chatbot-container { width: 86%; padding: 14px; }
+  .input-area input[type="text"] { width: 64%; }
+  .bot-text, .message.user { max-width: 92%; margin-left: 0; margin-right: 0; }
+}
+
+@media (max-width: 520px) {
+  .chatbot-container { width: 96%; padding: 12px; }
+  .input-area input[type="text"] { width: 56%; min-width: 140px; }
+  button { min-width: 86px; font-size: 14px; padding: 8px 10px; }
+}
+
+/* Focus-mode (plus large, moins d'éléments) */
+.chatbot-container.focus-mode {
+  width: 72%;
+  max-width: 1200px;
+  padding: 22px;
+  background: linear-gradient(180deg, #fffaf6, #fffaf6);
+  border: 1px solid rgba(139,69,19,0.06);
+}
+
+
+
+
+/* Chatbot.css — version finale fluide & harmonisée */
+
+/* Fade animation for loader & notifications */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+.fade-out {
+  animation: fadeOut 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+/* === le reste de ton CSS actuel inchangé === */
+/* Chatbot container, boutons, inputs, focus-mode, responsive, etc. */

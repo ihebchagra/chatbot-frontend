@@ -1,0 +1,49 @@
+.programme-container {
+  max-width: 900px;
+  margin: 40px auto;       /* centre horizontalement et ajoute une marge en haut/bas */
+  padding: 20px 30px;      /* espace intérieur à gauche/droite */
+  background: #fff;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.main-title {
+  font-size: 2em;
+  text-align: center;
+  color: #6a3e1f;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d6a773;
+  padding-bottom: 10px;
+}
+
+.day-programme {
+  margin-bottom: 40px;
+}
+
+.day-title {
+  font-size: 1.6em;
+  color: #3c2b1c;
+  margin-bottom: 15px;
+}
+
+.session {
+  background: #f9f4ee;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.session-title {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.session-description {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.session p {
+  margin: 4px 0;
+}

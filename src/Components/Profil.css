@@ -1,0 +1,63 @@
+.profil-container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.profil-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.icons-right {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.icon-left {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-history {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.chat-day {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-day h4 {
+    color: brown;
+}
+
+.chat-day ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chat-day li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-day li:last-child {
+    border-bottom: none;
+}
