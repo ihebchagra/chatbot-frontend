@@ -1,7 +1,6 @@
 // ✅ src/Chatbot.js — version finale améliorée
 import React, { useState, useEffect, useRef } from "react";
 import "./Chatbot.css";
-import { Circles } from "react-loader-spinner";
 import ReactMarkdown from "react-markdown";
 
 let mediaRecorder = null;
