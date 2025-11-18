@@ -38,7 +38,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
   // Suppression de compte
   const handleDeleteAccount = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/delete_account/${userEmail}`);
+      await axios.delete(`https://chedybi.api.iheb.tn/api/delete_account/${userEmail}`);
       alert("Compte supprimé avec succès.");
       localStorage.removeItem("user");
       setIsAuthenticated(false);

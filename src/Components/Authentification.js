@@ -19,7 +19,7 @@ const Authentification = ({ setIsAuthVisible, handleLogin }) => {
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/login", {
+    const response = await fetch("https://chedybi.api.iheb.tn/api/login", {
       method: "POST",
       credentials: "include", // nécessaire pour que Flask session fonctionne
       headers: {

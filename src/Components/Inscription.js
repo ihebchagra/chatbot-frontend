@@ -35,7 +35,7 @@ const SignupForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/register",
+        "https://chedybi.api.iheb.tn/api/register",
         {
           nom,
           prenom,
